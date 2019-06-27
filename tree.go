@@ -5,6 +5,7 @@
 package gin
 
 import (
+	"log"
 	"net/url"
 	"strings"
 	"unicode"
