@@ -242,7 +242,8 @@ func (n *node) addRoute(path string, handlers HandlersChain) {
 
 			} else if i == len(path) { // Make node a (in-path) leaf
 				if n.handlers != nil {
-					panic("handlers are already registered for path '" + fullPath + "'")
+					//panic("handlers are already registered for path '" + fullPath + "'")
+					log.Println("MOD: registering new handler (replace) for existong path (not concurence safe really)", fullPath)
 				}
 				n.handlers = handlers
 			}
